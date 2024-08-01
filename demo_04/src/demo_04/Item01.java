@@ -2,6 +2,8 @@ package demo_04;
 
 
 
+import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.function.Consumer;
 
 public class Item01 implements Interface
@@ -9,6 +11,18 @@ public class Item01 implements Interface
 	@Override
 	public void execute(){
 		indi( "Lambda" );
+		
+		ArrayList<String> animals = new ArrayList<String>( Arrays.asList( "Dog"));
+		
+		ArrayList<String> animal = new ArrayList<String>(); 
+			animal.add( "Cat" );
+			animal.add( "Lion" );
+			animal.add( "Fox" );
+			
+			animals.addAll( animal );
+			
+		String getAnimal = animals.get( 3 );
+			indi( getAnimal );
 	}
 
 	private String id;
