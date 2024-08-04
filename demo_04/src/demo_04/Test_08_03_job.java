@@ -6,7 +6,7 @@ public class Test_08_03_job
 	{
 		Calc03 calc = new Calc03( "Poly-morphism" );
 		calc.process( () -> {
-			System.out.println( "関心事を記述" );
+			System.out.println( "クラスパスを無視" );
 
 			Interface save = Calc03.create();
 				save.execute();
