@@ -23,7 +23,8 @@ public class Calc06 extends Item06
 				System.out.println( "計算式 :" + item.getId());
 				
 				item.display();
-				
+	
+				item.execute();
 			});
 
 		};
