@@ -123,15 +123,7 @@ public class Item06 implements Interface
 						:( ( num % 3 ) == 0 )? 
 								"false/true" : "false/false" ;
 			indi( num + " " + str );
-		
-		
-		
-		
-		
-		
-		
-		
-		
+			
 	}
 
 }
