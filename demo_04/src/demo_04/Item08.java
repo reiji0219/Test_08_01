@@ -96,6 +96,33 @@ public class Item08 implements Interface
 			String hoge = itera.next();
 				indi( hoge );
 		}
+		
+		ArrayList<Integer> seq = new ArrayList<Integer>();
+		
+		for( int i = 0; i < 5; i++ ) {
+			int number = new java.util.Random().nextInt( 4 ) + 1;
+				seq.add( number );
+		}
+		
+		for( int i : seq ) {
+			char[] base = { ' ', 'A', 'G', 'T', 'C' };
+				System.out.print( base[ i ] );
+		}
+		indi( " " );
+		
+		int num = new java.util.Random().nextInt( 10 ) + 1;
+		
+		String divition = ( ( num % 2  ) == 0 ) ? ( ( num % 3  ) == 0 ) ?
+										"true/true" : "true/false"
+							  :( ( num % 3  ) == 0 ) ?
+									  	"false/true" : "false/false" ;
+			indi( num + " " + divition );
+			
+			
+		
+		
+		
+		
 	}
 	
 	@Override
