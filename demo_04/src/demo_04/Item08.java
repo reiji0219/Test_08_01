@@ -117,12 +117,7 @@ public class Item08 implements Interface
 							  :( ( num % 3  ) == 0 ) ?
 									  	"false/true" : "false/false" ;
 			indi( num + " " + divition );
-			
-			
-		
-		
-		
-		
+				
 	}
 	
 	@Override
