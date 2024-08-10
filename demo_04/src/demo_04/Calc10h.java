@@ -42,6 +42,7 @@ public class Calc10h extends Item10h
 		
 		ArrayList<String> animal = new ArrayList<String>( Arrays.asList( "Phoenix" ));
 			animal.add( "Monkey" );
+			animal.add( "Penguin" );
 			
 			String getAnimal = animal.get( 1 );
 			indi( getAnimal );
