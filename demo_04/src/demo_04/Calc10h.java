@@ -1,5 +1,8 @@
 package demo_04;
 
+import java.util.ArrayList;
+import java.util.Arrays;
+
 public class Calc10h extends Item10h
 {
 	private String name;
@@ -37,6 +40,10 @@ public class Calc10h extends Item10h
 	public void process( Interface inter ) {
 		indi( "start" );
 		
+		ArrayList<String> animal = new ArrayList<String>( Arrays.asList( "Phoenix" ));
+			String getAnimal = animal.get( 0 );
+			indi( getAnimal );
+			
 		inter.execute();
 				
 		indi( "end" );
