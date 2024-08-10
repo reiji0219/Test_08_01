@@ -10,12 +10,7 @@ public class Test_08_10h
 
 			Interface save = Calc10h.create();
 			save.execute();
-			
-			
+						
 		});
-		
-		
-		
 	}
-	
 }
