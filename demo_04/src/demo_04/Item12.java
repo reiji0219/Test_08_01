@@ -1,15 +1,14 @@
 package demo_04;
 
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.Collections;
+import java.util.Comparator;
+import java.util.Iterator;
 import java.util.function.Consumer;
 
 public class Item12 implements Interface
 {
-	@Override
-	public void execute() {
-		indi( "Lambda" );
-		
-	}
-	
 	private String id;
 	private String name;
 	private double price;
@@ -60,6 +59,40 @@ public class Item12 implements Interface
 		return( price * tax );
 	}
 	
+	@Override
+	public void execute() {
+		indi( "Lambda" );
+		
+		ArrayList<String> animals = new ArrayList<String>( Arrays.asList( "Dog" ));
+		
+		ArrayList<String> animal = new ArrayList<String>();
+			animal.add( "Cat" );
+			animal.add( "Lion" );
+			animal.add( "Elephant" );
+		
+			animals.addAll( animal );
+			
+		String getAnimals = animals.get( 3 );
+			indi( getAnimals );
+			
+			animals.set( 3, "Fox" );
+			animals.remove( 2 );
+			animals.add( 2, "Penguin" );
+			
+			Comparator<String> compa = ( o1, o2 ) -> {
+				return( o2.compareTo( o1 ));
+			};
+			
+			Collections.sort( animals, compa );
+			
+			Iterator<String> itera = animals.iterator();
+			while( itera.hasNext()) {
+				String hoge = itera.next();
+					indi( hoge );
+			}
+		
+			
+	}
 	@Override
 	public String toString() {
 		return "Item12 [id=" + id + ", name=" + name + ", price=" + price + ", tax=" + tax + "]";
