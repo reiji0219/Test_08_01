@@ -1,20 +1,17 @@
 package demo_04;
 
-import java.io.Serializable;
-
-@SuppressWarnings("serial")
-public class Calc13 implements Serializable
+public class Calc13 extends Item13
 {
 	private String name;
 	
-	public Calc13() {
+	public Calc13( String name ) {
 		super();
 		this.name = name;
 	}
 	
 	public static Interface create() {
 		return() -> {
-			Calc13 calc = new Calc13();
+			Calc13 calc = new Calc13( "Poly-morphism" );
 
 			Item13.save( item -> {
 				item.id( "掛け算" )
@@ -27,30 +24,22 @@ public class Calc13 implements Serializable
 				
 				item.display();
 				
+				item.execute();
 			});
-
 		};
 	}
-
 	
-	public void setName(String name) {
-		this.name = name;
-	}
-
-	public String getName() {
-		return name;
-	}
-	
+	@Override
 	public void display() {
-		System.out.println( name );
+		indi( name );
 	}
 	
 	public void process( Interface inter ) {
-		System.out.println( "start" );
+		indi( "start" );
 		
 		inter.execute();
 		
-		System.out.println( "end" );
+		indi( "end" );
 	}
 
 }
