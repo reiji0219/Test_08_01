@@ -11,14 +11,6 @@ public class Test_08_13_home
 			Interface save = Calc13.create();
 				save.execute();
 			
-		});
-		
-		
-		
-		
-		
-		
+		});	
 	}
-	
-	
 }
