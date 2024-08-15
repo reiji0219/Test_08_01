@@ -6,6 +6,9 @@ public class Test_08_15_home
 	{
 		Item15.save( item -> {
 			item.id( "")
+				  .name( "" )
+				  .price( 980 )
+				  .tax( 1.1 );
 				
 		});
 		
