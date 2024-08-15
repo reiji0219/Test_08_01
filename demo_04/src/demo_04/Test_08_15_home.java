@@ -4,15 +4,12 @@ public class Test_08_15_home
 {
 	public static void main( String[] args ) 
 	{
-		Item15.save( item -> {
-			item.id( "")
-				  .name( "" )
-				  .price( 980 )
-				  .tax( 1.1 );
-				
+		Calc15 calc = new Calc15( "Poly-morphism" );
+		calc.process( () -> {
+			
+			Interface save = Calc15.create();
+				save.execute();
+			
 		});
-		
-		
-		
 	}
 }
